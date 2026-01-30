@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRAS Publisher - Global Research & Academic Society</title>
+    <meta name="description" content="GRAS Publisher is a leading international scholarly publishing platform dedicated to advancing knowledge through peer-reviewed journals in multidisciplinary research, science, engineering, arts, humanities, social sciences, economics, business, and management.">
+    <meta name="keywords" content="academic publishing, scholarly journals, peer review, open access, GRAS Publisher, multidisciplinary research">
+    <meta name="author" content="GRAS Publisher">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 2em;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #cce7ff;
+        }
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+        section {
+            margin-bottom: 60px;
+        }
+        h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        h3 {
+            color: #0056b3;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        /* Forms */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        form input, form textarea, form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+        /* Footer */
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        footer nav ul {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+        footer nav ul li {
+            margin: 0 10px;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 10px;
+            }
+            footer .container {
+                flex-direction: column;
+            }
+        }
+        /* Hide/Show Sections for Single Page */
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>GRAS Publisher</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#about" onclick="showPage('about')">About</a></li>
+                    <li><a href="#journals" onclick="showPage('journals')">Journals</a></li>
+                    <li><a href="#editorial-board" onclick="showPage('editorial-board')">Editorial Board</a></li>
+                    <li><a href="#aims-scope" onclick="showPage('aims-scope')">Aims & Scope</a></li>
+                    <li><a href="#peer-review" onclick="showPage('peer-review')">Peer Review Process</a></li>
+                    <li><a href="#author-guidelines" onclick="showPage('author-guidelines')">Author Guidelines</a></li>
+                    <li><a href="#ethics" onclick="showPage('ethics')">Ethics & Malpractice</a></li>
+                    <li><a href="#plagiarism" onclick="showPage('plagiarism')">Plagiarism Policy</a></li>
+                    <li><a href="#copyright" onclick="showPage('copyright')">Copyright & Licensing</a></li>
+                    <li><a href="#apc" onclick="showPage('apc')">APC/Publication Fees</a></li>
+                    <li><a href="#submit" onclick="showPage('submit')">Submit Manuscript</a></li>
+                    <li><a href="#contact" onclick="showPage('contact')">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <h2>Welcome to GRAS Publisher</h2>
+            <p>GRAS Publisher (Global Research & Academic Society) is a premier international scholarly publishing platform committed to fostering academic excellence and disseminating cutting-edge research across diverse disciplines. Our mission is to provide a robust, peer-reviewed environment for researchers, scholars, and academics worldwide to share their findings and contribute to the global knowledge base.</p>
+            <h3>Active Journals</h3>
+            <ul>
+                <li><a href="#journal-multidisciplinary" onclick="showPage('journal-multidisciplinary')">GRAS Journal of Multidisciplinary Research and Studies</a></li>
+                <li><a href="#journal-science" onclick="showPage('journal-science')">GRAS Journal of Science, Engineering and Technology</a></li>
+                <li><a href="#journal-arts" onclick="showPage('journal-arts')">GRAS Journal of Arts, Humanities and Social Sciences</a></li>
+                <li><a href="#journal-economics" onclick="showPage('journal-economics')">GRAS Journal of Economics, Business and Management</a></li>
+            </ul>
+            <h3>Call for Papers</h3>
+            <p>We invite submissions of original research articles, reviews, and case studies. All submissions undergo rigorous peer review to ensure quality and integrity.</p>
+            <p>Submission Email: <a href="mailto:submit@graspublisher.com">submit@graspublisher.com</a></p>
+            <a href="https://wa.me/1234567890" class="btn">Contact via WhatsApp</a>
+        </section>
+
+        <!-- About GRAS Publisher -->
+        <section id="about" class="page">
+            <h2>About GRAS Publisher</h2>
+            <p>GRAS Publisher is dedicated to advancing scholarly communication through open-access publishing. Founded with the vision of bridging gaps in global research, we support interdisciplinary collaboration and uphold the highest standards of academic integrity. Our platform serves as a hub for innovative ideas, facilitating the exchange of knowledge among researchers from around the world.</p>
+        </section>
+
+        <!-- Journals Overview -->
+        <section id="journals" class="page">
+            <h2>Journals</h2>
+            <p>Explore our portfolio of peer-reviewed journals covering a wide range of disciplines.</p>
+            <ul>
+                <li><a href="#journal-multidisciplinary" onclick="showPage('journal-multidisciplinary')">GRAS Journal of Multidisciplinary Research and Studies</a></li>
+                <li><a href="#journal-science" onclick="showPage('journal-science')">GRAS Journal of Science, Engineering and Technology</a></li>
+                <li><a href="#journal-arts" onclick="showPage('journal-arts')">GRAS Journal of Arts, Humanities and Social Sciences</a></li>
+                <li><a href="#journal-economics" onclick="showPage('journal-economics')">GRAS Journal of Economics, Business and Management</a></li>
+            </ul>
+        </section>
+
+        <!-- Individual Journal Pages -->
+        <section id="journal-multidisciplinary" class="page">
+            <h2>GRAS Journal of Multidisciplinary Research and Studies</h2>
+            <h3>About the Journal</h3>
+            <p>This journal publishes high-quality research across multiple disciplines, promoting interdisciplinary approaches to complex global challenges.</p>
+            <h3>Aims & Scope</h3>
+            <p>To provide a platform for innovative multidisciplinary research that integrates knowledge from various fields to address contemporary issues.</p>
+            <h3>Departments/Disciplines</h3>
+            <ul>
+                <li>Social Sciences</li>
+                <li>Natural Sciences</li>
+                <li>Humanities</li>
+                <li>Technology</li>
+            </ul>
+            <h3>Submission Instructions</h3>
+            <p>Submit manuscripts via email to <a href="mailto:submit@graspublisher.com">submit@graspublisher.com</a> or use the online form.</p>
+            <h3>Editorial Board</h3>
+            <p>Editor-in-Chief: Dr. John Doe<br>Associate Editors: Dr. Jane Smith, Dr. Alex Johnson</p>
+            <h3>Peer Review Description</h3>
+            <p>All submissions undergo double-blind peer review by experts in the field.</p>
+            <h3>Ethics Policy</h3>
+            <p>We adhere to COPE guidelines for ethical publishing practices.</p>
+        </section>
+
+        <section id="journal-science" class="page">
+            <h2>GRAS Journal of Science, Engineering and Technology</h2>
+            <h3>About the Journal</h3>
+            <p>Focused on advancements in science, engineering, and technology, this journal disseminates cutting-edge research and innovations.</p>
+            <h3>Aims & Scope</h3>
+            <p>To advance knowledge in STEM fields through rigorous research and application-oriented studies.</p>
+            <h3>Departments/Disciplines</h3>
+            <ul>
+                <li>Physics</li>
+                <li>Chemistry</li>
+                <li>Engineering</li>
+                <li>Computer Science</li>
+            </ul>
+            <h3>Submission Instructions</h3>
+            <p>Submit manuscripts via email to <a href="mailto:submit@graspublisher.com">submit@graspublisher.com</a> or use the online form.</p>
+            <h3>Editorial Board</h3>
+            <p>Editor-in-Chief: Dr. Emily
